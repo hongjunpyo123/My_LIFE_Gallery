@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Welcome!</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=0.25, maximum-scale=0.25">
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                document.body.style.zoom = '25%';
+                window.scrollTo(0, 0);
+            });
+        </script>
+        <style>
+            *{
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            html{
+                background-image: url(pic/wood2.jpg);
+                background-size: 100%;
+                background-repeat: repeat-y;
+            }
+            body{
+                position: relative;
+                top: 900px;
+                margin: 0 auto;
+                width: 0px;
+                height: 100vh;
+                background-color: antiquewhite;
+            }
+            .login_form{
+                position: relative;
+                width: 1050px;
+                height: 600px;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                background-color: white;
+                box-shadow: 10px 10px gray;
+                border-radius: 14px;
+            }
+            .login_form form{
+                width: 1050px;
+                height: 600px;
+            }
+            #nickname{
+                position: relative;
+                top: 25%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                width: 750px;
+                height: 180px;
+                border: none;
+                background-color: aliceblue;
+                box-shadow: 5px 5px violet;
+                border-radius: 30px;
+                text-align: center;
+                font-size: 460%;
+            }
+            form>button{
+                position: relative;
+                float: right;
+                top: 40%;
+                right: 50%;
+                height: 180px;
+                width: 360px;
+                transform: translate(50%,-50%);
+                background-color: darkseagreen;
+                border-radius: 150%;
+                font-size: 480%;
+                border: none;
+                font-family: fantasy;
+            }
+            form>button:hover{
+                background-color: aquamarine;
+                cursor: pointer;
+            }
+            h1{
+                position: relative;
+                top: -150%;
+                left: -32%;
+                font-size: 90px;
+                width: 1800px;
+                color: blue;
+                font-family: fantasy;
+                font-weight: 1000;
+            }
+            .pic1{
+                transition: box-shadow 0.3s ease;
+                background-color: yellow;
+                position: relative;
+                width: 700px;
+                height: 700px;
+                border-radius: 50%;
+                border: 8px solid gray;
+                box-shadow: 10px 10px greenyellow;
+
+                top: -170%;
+                left: -120%;
+            }
+            .pic2{
+                transition: box-shadow 0.3s ease;
+                background-color: orange;
+                position: relative;
+                width: 700px;
+                height: 700px;
+                border-radius: 50%;
+                border: 8px solid gray;
+                box-shadow: 10px 10px yellow;
+
+                top: -170%;
+                left: 150%;
+            }
+            .pic1:hover{
+                transition: background-image 0.5s ease;
+                transition: box-shadow 0.3s ease;
+                background-size: 400px;
+                background-image: url(pic/1.jpg);
+                box-shadow: 11px 11px blue;
+
+            }
+            .pic2:hover{
+                transition: background-image 0.5s ease;
+                transition: box-shadow 0.3s ease;
+                background-size: 800px;
+                background-image: url(pic/2.jpg);
+                box-shadow: 11px 11px blue;
+
+            }
+        </style>
+    </head>
+    <body>
+        <div class="login_form">
+            <form method="post" action="intro.html">
+                <input type="text" name="nickname" id="nickname" placeholder="방문자 성함">
+                <button>GO!</button>
+            </form>
+            <h1 style="text-align: center;">이곳은 추억이 가득한 공간입니다!</h1>
+            <div class="pic1"></div>
+            <div class="pic2"></div>
+        </div>
+    </body>
+</html>

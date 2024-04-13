@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MY PHOTO Gallery</title>
+        <meta charset="utf-8">
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                document.body.style.zoom = '25%';
+                window.scrollTo(0, 0);
+            });
+        </script>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            img{
+                width: 800px;
+                height: 1379px;
+            }
+            body{
+                position: relative;
+                margin: 0 auto;
+                height: 10000px;
+                min-width: 5300px;
+                min-height: 3636px;
+                background-image: url(pic/wood2.jpg);
+                background-size: 100%;
+                background-repeat: repeat-y;
+            }
+            #bar{
+                position: fixed;
+                top: -1%;
+                text-align: center;
+                z-index: 2;
+                width: 100%;
+                height: 350px;
+                bottom: 90%;
+                min-width: 3836px;
+                background-color: rgba(100%, 100%, 100%, 0%);
+            }
+            #bar:hover #bar_1{
+                transition: background-color 0.5s ease;
+                background-color: rgba(100%, 100%, 100%, 100%);
+                color: black;
+                border-radius: 10px;
+            }
+            #bar:hover #bar_2{
+                transition: background-color 0.5s ease;
+                color: black;
+                border-radius: 10px;
+            }
+            #bar:hover #bar_3{
+                transition: background-color 0.5s ease;
+                color: black;
+                border-radius: 10px;
+            }
+            #bar_1:hover{
+                text-decoration: underline;
+                text-underline-position: under;
+            }
+            #bar_2:hover{
+                text-decoration: underline;
+                text-underline-position: under;
+            }
+            #bar_3:hover{
+                text-decoration: underline;
+                text-underline-position: under;
+            }
+            a{
+                text-decoration: none;
+            }
+            #bar_1{
+                transition: background-color 0.3s ease;
+                text-align: center;
+                color: white;
+                font-size: 110px;
+                font-family: Georgia;
+                font-weight: 100;
+                height: 450px;
+                line-height: 450px;
+            }
+            #bar_2{
+                position: absolute;
+                transition: background-color 0.3s ease;
+                text-align: center;
+                color: white;
+                font-size: 110px;
+                font-family: Georgia;
+                font-weight: 100;
+                height: 450px;
+                line-height: 450px;
+                background-color: rgba(100%, 100%, 100%, 0%);
+                top: 0%;
+                left: 24%;
+            }
+            #bar_3{
+                position: absolute;
+                transition: background-color 0.3s ease;
+                text-align: center;
+                color: white;
+                font-size: 110px;
+                font-family: Georgia;
+                font-weight: 100;
+                height: 450px;
+                line-height: 450px;
+                background-color: rgba(100%, 100%, 100%, 0%);
+                top: 0%;
+                left: 90%;
+            }
+            .img1{
+                position: relative;
+                display: inline-block;
+                top: 800px;
+                left: 10%;
+                width: 70%;
+            }
+
+
+            .img1_writing{
+                position: relative;
+                left: 17%;
+                width: 100%;
+                height: 1380px;
+                min-height: 1380px;
+                top: -1385px;
+                background-color: rgba(0, 0, 0, 50%);
+                z-index: -1;
+                border-radius: 30px;
+            }
+            .img1 img{
+                border-radius: 20px;
+                z-index: 1;
+            }
+            .img1 img:hover{
+                box-shadow: 20px 20px gray;
+            }
+            .img1_writing p{
+                text-align: center;
+                font-size: 90px;
+            }
+
+
+
+            .img2_writing{
+                position: relative;
+                left: 17%;
+                width: 100%;
+                height: 1380px;
+                min-height: 1380px;
+                top: -1381px;
+                background-color: rgba(0, 0, 0, 50%);
+                z-index: -1;
+                border-radius: 30px;
+            }
+            .img2 img{
+                border-radius: 20px;
+                z-index: 1;
+            }
+            .img2 img:hover{
+                box-shadow: 20px 20px gray;
+            }
+            .img2_writing p{
+                text-align: center;
+                font-size: 90px;
+            }
+
+
+            .img3_writing{
+                position: relative;
+                left: 17%;
+                width: 100%;
+                height: 1378px;
+                min-height: 1378px;
+                top: -1383px;
+                background-color: rgba(0, 0, 0, 50%);
+                z-index: -1;
+                border-radius: 30px;
+            }
+            .img3 img{
+                border-radius: 20px;
+                z-index: 1;
+            }
+            .img3 img:hover{
+                box-shadow: 20px 20px gray;
+            }
+            .img3_writing p{
+                text-align: center;
+                font-size: 90px;
+            }
+
+
+            .img4_writing{
+                position: relative;
+                left: 17%;
+                width: 100%;
+                height: 1379px;
+                min-height: 1379px;
+                top: -1383px;
+                background-color: rgba(0, 0, 0, 50%);
+                z-index: -1;
+                border-radius: 30px;
+            }
+            .img4 img{
+                border-radius: 20px;
+                z-index: 1;
+            }
+            .img4 img:hover{
+                box-shadow: 20px 20px gray;
+            }
+            .img4_writing p{
+                text-align: center;
+                font-size: 90px;
+            }
+
+
+
+            .img5_writing{
+                position: relative;
+                left: 17%;
+                width: 100%;
+                height: 1379px;
+                min-height: 1379px;
+                top: -1383px;
+                background-color: rgba(0, 0, 0, 50%);
+                z-index: -1;
+                border-radius: 30px;
+            }
+            .img5 img{
+                border-radius: 20px;
+                z-index: 1;
+            }
+            .img5 img:hover{
+                box-shadow: 20px 20px gray;
+            }
+            .img5_writing p{
+                text-align: center;
+                font-size: 90px;
+            }
+
+
+            .img6_writing{
+                position: relative;
+                left: 17%;
+                width: 100%;
+                height: 1379px;
+                min-height: 1379px;
+                top: -1383px;
+                background-color: rgba(0, 0, 0, 50%);
+                z-index: -1;
+                border-radius: 30px;
+            }
+            .img6 img{
+                border-radius: 20px;
+                z-index: 1;
+            }
+            .img6 img:hover{
+                box-shadow: 20px 20px gray;
+            }
+            .img6_writing p{
+                text-align: center;
+                font-size: 90px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="bar">
+            <a href="intro.html"><h1 id="bar_1">. MY LIFE Blog .</h1></a>
+            <a href="photos.php"><p id="bar_2">photos</p></a>
+            <a href="login.html"><p id="bar_3">logout</p></a>
+        </div>
+        <div class="img1">
+            <a href="pic/travel1.jpg"><img src="pic/travel1.jpg"></a>
+            <div class="img1_writing">
+                <p>2023년 12월 24일</p>
+                <p>.</p>
+                <p>"호수에서 들려오는 잔잔한 물소리와 따뜻한 햇볕이 인상적이었던 곳"</p>
+                <p>.</p>
+                <p>호수 반대편 까지 이어진 다리를 건너면서 친구들과 사진도 찍고
+                    추억을 쌓았다
+                </p>
+                <p>.</p>
+                <p>물론 앞에 보이는 분홍색 꽃잎은 모조품이였지만..</p>
+            </div>
+
+            <a href="pic/travel2.jpg"><img src="pic/travel2.jpg"></a>
+            <div class="img2_writing">
+                <p>2023년 4월 30일</p>
+                <p>.</p>
+                <p>"아무 곳에서나 셔터를 눌러도 아름다웠던 곳"</p>
+                <p>.</p>
+                <p>고등학교 동창들이랑 글램핑 후 돌아오는 길에 잠시 들렸다</p>
+                <p>좀 귀찮긴 했지만 막상 와보니 이게 무슨.. </p>
+                <p>아름다운 풍경에 여기서만 10장 넘는 사진을 찍었다</p>
+                <p>여긴 부모님 모시고 한번 더오리라 다짐하였다</p>
+            </div>
+
+            <a href="pic/travel7.jpg"><img src="pic/travel7.jpg"></a>
+            <div class="img3_writing">
+                <p>2022년 6월 6일</p>
+                <p>.</p>
+                <p>"공장에서 커피를 파는 아이러니한 곳"</p>
+                <p>.</p>
+                <p>인천에 유명한 감성카페 "조양방직"</p>
+                <p>첫 인상은 무슨 공사장 입구에 들어가는 듯한 기분이였다...</p>
+                <p>"이런 곳에서 커피를??" 막상 들어가니 주변 환경과 어울리게
+                    잘 꾸며져 있었다
+                </p>
+                <p>각종 방직기구들이 전시되어있고 거대한 사과도 볼 수 있었다!</p>
+                
+            </div>
+
+            <a href="pic/travel12.jpg"><img src="pic/travel12.jpg"></a>
+            <div class="img4_writing">
+                <p>2023년 12월 27일</p>
+                <p>.</p>
+                <p>"군대 전역 후 후임과 놀다 가게된 백화점"</p>
+                <p>당시 크리스마스 컨셉으로 백화점 일부가 예쁘게 꾸며져 있었다</p>
+                <p>옷 구경하러 갔다가 다른것만 보고 돌아왔다..</p>
+                <p>옷은 볼게 좀 없었다는...</p>
+            </div>
+
+            <a href="pic/travel9_1.jpg"><img src="pic/travel9_1.jpg"></a>
+            <div class="img5_writing">
+                <p>2022년 5월 28일</p>
+                <p>.</p>
+                <p>"마치 외국에 온 듯한 기분.."</p>
+                <p>친구들과 서울숲에 놀러갔다 당시 날씨가 봄 여름 사이 정도여서 그런지</p>
+                <p>살짝 따뜻한 날씨에 아름다운 꽃들이 엄청 피어있었다</p>
+                <p>근처를 둘러보다가 마치 영화에서나 볼법한 대나무가 무성한 풍경을 보게되어</p>
+                <p>기념으로 남겼다.. 여긴 너무 좋아서 사진도 여러장 찍었다.</p>
+            </div>
+
+            <a href="pic/travel10.jpg"><img src="pic/travel10.jpg"></a>
+            <div class="img6_writing">
+                <p>2023년 9월 25일</p>
+                <p>.</p>
+                <p>"감성카페 그만..</p>
+                <p>친구중에 감성카페를 유난히 좋아하는 친구가 있다</p>
+                <p>가끔 가면 재밌고 신기한데 만날때마다 밥먹고 꼭 가자고 해서</p>
+                <p>요즘 만날때마다 다른곳 가자고 설득해야한다</p>
+                <p>그래도 친구 덕에 많은 새로운 추억도 쌓고 사진도 남기고 고마운 인연</p>
+                <p>.</p>
+                <p>여기 바닥이 되게 특이하다 무슨 톱밥같은게 깔려있는데 밟을때마다 묘한 기분이 든다</p>
+            </div>
+        </div>
+    </body>
+</html>
